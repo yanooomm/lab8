@@ -12,11 +12,11 @@ int main()
     cin >> n;
     n;
     int* a = new int[n];
+    
     for (int i = 0; i < n; i++)
         cin >> a[i];
     int imax=0, imin=0;
-    //int min = a[0];
-    //int max = a[0];
+    
     for (int i = 0; i < n; ++i)
     {
         if (a[i] < a[imin])
@@ -24,9 +24,6 @@ int main()
         if (a[i] > a[imax])
             imax = i;
     }
-    /*for (int i = n; i > imin - 1; i--)
-        *(a + i) = *(a + i + 1);
-    *(a + imin - 1) = 000;*/
 
     if (imax > imin)
         imax++;
@@ -40,10 +37,6 @@ int main()
     for (int i = n - 1; i > imax + 1; --i)
         a[i] = a[i - 1];
     a[imax + 1] = 0;
-
-
-
-
 
     cout << endl << "Массив: ";
     for (int i = 0; i < n; ++i)
